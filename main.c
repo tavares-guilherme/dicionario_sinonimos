@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "hash.h"
 
 int main(){
 
@@ -12,9 +13,8 @@ int main(){
     char comando;
     int cont = 0;
     int exec = 0;
-    
-    //Serao inseridos no maximo 10000 palavras de no maximo 513 digitos.
-    char tabela_hash[513][10000];
+
+    HASH tabela_hash[10000]; //Maximo de 10000 pares de palavras.
 
     while(fscanf(arq, "%s", entrada) != EOF){
         
@@ -62,24 +62,23 @@ int main(){
                 case 65:
                 case 97:
                     
-                    printf("Inserindo...\n");
+                    hash_inserir(NULL, entrada);
                     break;
                 
                 case 82:
                 case 114:
-                    printf("Removendo...\n");
+                    hash_remover(NULL, entrada);
                     break;
                 
                 case 70:
                 case 102:
-                    printf("Buscando...\n");
+                    hash_buscar(NULL, entrada);
                     break;
             }
 
             exec = 0;
         }
     }
-
 
 
     fclose(arq);

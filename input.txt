@@ -1,0 +1,10 @@
+a : dog ogday
+a : cat atcay
+A : pig igpay
+a : froot ootfray
+r : ootfray
+f : atcay
+f : ittenkay
+f : oopslay
+a: loops oopslay
+f : oopslay
